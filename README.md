@@ -7,5 +7,6 @@
 Tessera работает на устройствах под управление Windows, и Android
 # Установка
 Android: Вы можете скачать APK прямо из основного древа или же во вкладке Releases: https://github.com/kvazar-git/tessera/releases/tag/tessera
+Важно! При первом запуске после выдачи разрешений программа создаст нужные директории и завершится
 
 Windows: Из-за веса файла GitHub не позволяет выложить файл здесь. Ссылка на Google Disk: https://drive.google.com/drive/folders/1ltsUHrm7ptJ1T7socuPWRsvPIJo4XCwU?usp=sharing
