@@ -11,4 +11,4 @@ Android: Вы можете скачать APK прямо из основного
 Важно! При первом запуске, после выдачи разрешений программа создаст нужные директории и закроется.
 
 
-Windows: Из-за веса файла GitHub не позволяет выложить файл здесь. Ссылка на Google Disk: https://drive.google.com/drive/folders/1ltsUHrm7ptJ1T7socuPWRsvPIJo4XCwU?usp=sharing
+Windows: Из-за веса файла GitHub не позволяет выложить файл здесь. Ссылка на Yandex Disk: https://disk.yandex.ru/d/K50ViuXejFr9vA
