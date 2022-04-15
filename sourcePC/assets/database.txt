@@ -1,0 +1,4 @@
+kvazar, b'$2b$12$ymPIrhBwFMG21qxhr7Ih9.KCB6VS94ODHM/gRkYYR95N6AozWa98a'
+vvanyokk, b'$2b$12$/ZVkaj3L8oCLC/A5Cs7oCu6SXJOc6ZA508ee.ovJ7.5zxszVroq6y'
+kvazar1, b'$2b$12$utQ2TEUArxpXy32n4b0tw.e6rQb.XYx7Ofj2XIWmN8BdxzWmK6xce'
+kvazaris, b'$2b$12$5wJU.dFPKX0NQnLwAy3LGebrIe9JKFItRn/J5MBh/i0QuVQQLGPzu'
