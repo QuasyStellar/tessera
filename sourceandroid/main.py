@@ -25,22 +25,10 @@ def check_permissions(perms):
     return True
 perms = [Permission.READ_EXTERNAL_STORAGE, Permission.WRITE_EXTERNAL_STORAGE]
 
+
 while check_permissions(perms)!=True:
   request_permissions(perms)
-try:
-  rdir = "/mnt/sdcard/tessera"
-  if not os.path.isdir(rdir):
-    os.mkdir(rdir)
-  if not os.path.isdir(rdir+"/assets"):
-    os.mkdir(rdir+"/assets")
-  if not os.path.isdir(rdir+"/assets/passwords"):
-    os.mkdir(rdir+"/assets/passwords")
-  f = open(rdir+"/assets/database.txt", 'a')
-  f.close()
-  files = open("/data/data/org.zhu.tessera/files/app/passwords_list.txt", "r")
-  file = files.read()
-except:
-  pass
+
 
 
 auth = "Не авторизован"
@@ -159,7 +147,6 @@ Builder.load_string("""
         Button:
             text: 'Войти'
             on_press: root.gainAccess()
-            on_release: root.password.text =""
             color:  (0, 65, 0, 1)
             size_hint:
             font_size: 40
@@ -259,8 +246,6 @@ Builder.load_string("""
             id: reg
             text: 'Зарегистрироваться'
             on_press: root.register()
-            on_release: root.password.text=""
-            on_release: root.password1.text=""
             color: (0, 60, 0, 1)
             font_size: 40
     
@@ -275,6 +260,7 @@ Builder.load_string("""
         Button:
             text: 'Войти/Зарегистрироваться'
             on_press: root.manager.current = 'log'
+            on_press: root.newfolders()
             color:  (1, 1, 1, 1)
             font_size: 35
       
@@ -283,6 +269,7 @@ Builder.load_string("""
             text: '''Войти без авторизации'''
             on_press: root.manager.current = 'mainmenu' 
             on_press: root.non()
+            on_press: root.newfolders()
             color:  (1, 1, 1, 1)
             font_size: 35
 <MainMenu>:
@@ -649,6 +636,8 @@ class LoginScreen(Screen):
                                 auth = "Авторизован"
                                 self.show_pop6()
                                 currentuser = self.login.text
+                                self.login.text=""
+                                self.password.text=""
                                 self.manager.current = 'mainmenu'
 
                             else:
@@ -736,6 +725,9 @@ class Register(Screen):
                             self.show_pop2()
                             currentuser = Username
                             auth = "Авторизован"
+                            self.login.text=""
+                            self.password.text=""
+                            self.password1.text=""
                             self.manager.current = "mainmenu"
 
                         else:
@@ -778,6 +770,20 @@ class LoginS(Screen):
     def non(self):
         global auth
         auth = "Не авторизован"
+    def newfolders(self):
+      global rdir
+      global file
+      rdir = "/mnt/sdcard/tessera"
+      if not os.path.isdir(rdir):
+        os.mkdir(rdir)
+      if not os.path.isdir(rdir+"/assets"):
+        os.mkdir(rdir+"/assets")
+      if not os.path.isdir(rdir+"/assets/passwords"):
+        os.mkdir(rdir+"/assets/passwords")
+      f = open(rdir+"/assets/database.txt", 'a')
+      f.close()
+      files = open("/data/data/org.zhu.tessera/files/app/passwords_list.txt", "r")
+      file = files.read()
 
     pass
 
