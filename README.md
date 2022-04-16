@@ -6,7 +6,7 @@
 # Мульти-платформенность
 Tessera работает на устройствах под управление Windows, и Android
 # Установка
-Android: Вы можете скачать APK прямо из основного древа или же во вкладке Releases: https://github.com/kvazar-git/tessera/releases/tag/tessera1.5
+Android: Вы можете скачать APK прямо из основного древа или же во вкладке Releases: https://github.com/kvazar-git/tessera/releases/tag/tessera1.5 
 (После первой регистрации программма закроется. Выполните вход.)
 
 
