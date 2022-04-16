@@ -158,8 +158,8 @@ Builder.load_string("""
         
         Button:
             text: 'Войти'
-            on_release: root.gainAccess()
-            on_press: root.password.text =""
+            on_press: root.gainAccess()
+            on_release: root.password.text =""
             color:  (0, 65, 0, 1)
             size_hint:
             font_size: 40
